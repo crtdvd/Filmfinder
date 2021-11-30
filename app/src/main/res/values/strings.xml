@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">FilmFinder</string>
+    <string name="logIn_app">Iniciar Sesión</string>
+    <string name="home_user">Nombre Usuario</string>
+    <string name="text_intro">Bienvenido a FilmFInder, la app que te acerca con tus pelis favoritas</string>
+    <string name="logo_app">logo filmFinder</string>
+    <string name="hint_name_user">Usuario</string>
+    <string name="hint_name_password">Contraseña</string>
+    <string name="intro_app_description">Que ofrece film finder</string>
+    <string name="home_intro_app">Ingresa  texto relacionado a tu película o desliza el filtro</string>
+    <string name="no_registred_yet">Aún no te has registrado?</string>
+    <string name="create_account">Registrarse</string>
+    <string name="home_user_icon">user_icon</string>
+    <string name="home_hint_search">Busca aqui...</string>
+    <string name="filter_hint_search">Busca aqui...</string>
+    <string name="filter_description">Filtros</string>
+    <string name="filter_title">Filtros</string>
+    <string name="filter_year">Año</string>
+    <string name="filter_enable_year">Rango</string>
+    <string name="filter_director">Director</string>
+    <string name="filter_hint_director">Busca...</string>
+    <string name="filter_rating">Calificación</string>
+    <string name="filter_rating_description">Rating Movies</string>
+    <string name="login_but">Login</string>
+    <string name="create_intro">Al crear una cuenta podrás guardar y acceder a tus películas favoritas y calificaciones </string>
+
+</resources>

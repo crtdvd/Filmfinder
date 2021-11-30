@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_app"
+    android:contentDescription="@string/filter_rating_description"
+    android:visibility="visible"
+    tools:context=".FilterActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="77dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/logo_app"
+        app:layout_constraintBottom_toTopOf="@+id/txt_filtros"
+        app:layout_constraintEnd_toStartOf="@+id/search_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/slim_logo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/search_bar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="@id/logo">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_finder"
+            android:hint="@string/filter_hint_search"
+            android:padding="20px"
+            android:textColorHint="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txt_filtros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filter_title"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/linear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/txt_año"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/filter_year"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_filtros" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/txt_año"
+        app:layout_constraintStart_toEndOf="@id/txt_año"
+        app:layout_constraintTop_toTopOf="@+id/txt_año">
+
+        <Spinner
+            android:id="@+id/spn_año1"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/color_buttons" />
+
+        <Spinner
+            android:id="@+id/spn_año2"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/color_buttons"
+            tools:layout_editor_absoluteY="228dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/tv_rango"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="56dp"
+        android:text="@string/filter_enable_year"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/linear"
+        app:layout_constraintTop_toBottomOf="@+id/txt_filtros" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/linear"
+        app:layout_constraintEnd_toEndOf="@id/tv_rango"
+        app:layout_constraintStart_toStartOf="@id/tv_rango"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rango" />
+
+    <TextView
+        android:id="@+id/tv_director"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/filter_director"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_año"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_año" />
+
+    <TextView
+        android:id="@+id/tv_genero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:text="Género"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/txt_año"
+        app:layout_constraintStart_toStartOf="@id/txt_año"
+        app:layout_constraintTop_toBottomOf="@+id/tv_director" />
+
+
+    <Spinner
+        android:id="@+id/spn_genero"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toEndOf="@id/tv_genero"
+        app:layout_constraintTop_toTopOf="@id/tv_genero"
+        app:layout_constraintBottom_toBottomOf="@id/tv_genero"
+        android:background="@color/color_buttons"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lo_director"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="36dp"
+
+        app:layout_constraintBottom_toBottomOf="@id/tv_director"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_director"
+        app:layout_constraintTop_toTopOf="@id/tv_director"
+
+        tools:layout_editor_absoluteY="424dp">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_finder"
+            android:hint="@string/filter_hint_director"
+            android:padding="20px"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_calificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filter_rating"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/but_buscar"
+        app:layout_constraintEnd_toEndOf="@+id/tv_genero"
+        app:layout_constraintTop_toBottomOf="@+id/tv_genero"
+        app:layout_constraintVertical_bias="0.474" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/filter_rating_description"
+        android:labelFor="@id/tv_calificacion"
+        app:layout_constraintStart_toEndOf="@id/tv_calificacion"
+        app:layout_constraintBottom_toBottomOf="@id/tv_calificacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_calificacion" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/but_buscar"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="34dp"
+        android:background="@drawable/round_but"
+        android:text="BUSCAR"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ratingBar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

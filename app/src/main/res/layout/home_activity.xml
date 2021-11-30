@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_app"
+    android:visibility="visible"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home_user"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/user_icon"
+        app:layout_constraintStart_toEndOf="@+id/user_icon"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/user_icon"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="30dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/home_user_icon"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/usericon" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/logo_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username"
+        app:srcCompat="@drawable/logoapp" />
+
+    <TextView
+        android:id="@+id/tv_intro"
+        android:layout_width="267dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/home_intro_app"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lo_buscar"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_intro">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtEdit_buscar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_finder"
+            android:hint="@string/home_hint_search"
+            android:textColorHint="@color/white"
+            android:padding="8dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/imgBut_filter"
+        android:layout_width="105dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/filter_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lo_buscar"
+        app:srcCompat="@drawable/filtros"
+        android:background="@android:color/transparent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
